@@ -12,4 +12,5 @@ jobs:
       - name: Build API
         run: |
           echo "Run script"
-          ./common.sh
+          chmod +x ./public/common.sh
+        shell: bash
