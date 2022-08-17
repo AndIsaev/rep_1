@@ -17,5 +17,6 @@ jobs:
           ls
           echo "Run script"
           sh ./common.sh
+          cd ..
           echo "this is a new line" >> file.txt
           ls
