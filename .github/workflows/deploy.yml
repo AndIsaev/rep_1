@@ -15,8 +15,7 @@ jobs:
         run: |
           pwd
           ls
-          cd ..
+          echo "Run script"
+          sh ./common.sh
+          echo "this is a new line" >> docs/file.txt
           ls
-#          echo "Run script"
-#          sh ./common.sh
-#          ls
