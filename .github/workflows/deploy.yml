@@ -16,6 +16,6 @@ jobs:
           date > docs/generated.txt
           git config user.name Andrey
           git config user.email and.isaev.v@yandex.ru
-          git add .
-          git commit -m "generated"
+          git add docs
+          git commit -m "updated docs"
           git push
