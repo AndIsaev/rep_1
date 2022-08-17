@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build API
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         run: |
           echo "Run script"
           sh ./common.sh
