@@ -12,4 +12,4 @@ jobs:
       - name: Build API
         run: |
           echo "Run script"
-          /bin/bash ./common.sh
+          ./common.sh
