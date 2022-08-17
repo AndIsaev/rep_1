@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: Build API
         run: |
-          echo "Build API"
-          sleep 10s
+          echo "Run script"
+          common.sh
