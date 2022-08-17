@@ -19,8 +19,8 @@ jobs:
           echo "this is a new line" >> file.txt
       - name: Commit report
         run: |
-          git config --global user.name 'Andrey'
-          git config --global user.email 'and.isaev.v@yandex.ru'
+          git config --global user.name Andrey
+          git config --global user.email and.isaev.v@yandex.ru
           git remote set-url origin https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY
 #          git checkout "${GITHUB_REF:11}"
           git commit -am "Automated report"
