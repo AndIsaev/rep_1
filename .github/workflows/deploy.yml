@@ -13,5 +13,7 @@ jobs:
 
       - name: Build API
         run: |
+          pwd
+          ls
           echo "Run script"
           sh ./common.sh
