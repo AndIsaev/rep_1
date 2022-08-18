@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master
+      - develop
 
 jobs:
   build:
@@ -14,10 +14,11 @@ jobs:
         with:
           python-version: '3.9'
       - run: |
-          sh ./common.sh
-          date > docs/generated.txt
-          git config user.name Andrey
-          git config user.email and.isaev.v@yandex.ru
-          git add docs
-          git commit -m "updated docs"
-          git push
+#          sh ./common.sh
+#          date > docs/generated.txt
+#          git config user.name Andrey
+#          git config user.email and.isaev.v@yandex.ru
+#          git add docs
+#          git commit -m "updated docs"
+#          git push
+          git branch
