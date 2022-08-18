@@ -1,6 +1,5 @@
 name: Deploy
 on:
-  workflow_dispatch:
   push:
     branches:
       - master
@@ -22,4 +21,3 @@ jobs:
           git add docs
           git commit -m "updated docs"
           git push
-          python3 -V
