@@ -5,7 +5,7 @@ on:
       logLevel:
         description: 'Log level'
         required: true
-        default: 'warning'
+        default: 'info'
         type: choice
         options:
         - info
@@ -32,3 +32,5 @@ jobs:
           git add docs
           git commit -m "updated docs"
           git push
+        env:
+          LEVEL: ${{ inputs.logLevel }}
