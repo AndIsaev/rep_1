@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
-      - uses: ./.github/tests/test.yml
+      - uses: ./.github/actions/test.yml
         with:
           python-version: '3.9'
       - run: |
