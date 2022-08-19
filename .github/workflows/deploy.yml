@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master
+      - develop
 
 
 jobs:
@@ -22,3 +22,11 @@ jobs:
           git add docs
           git commit -m "updated docs"
           git push
+
+  tests:
+    needs: build
+
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "hello!"
