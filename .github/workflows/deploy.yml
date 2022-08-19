@@ -3,18 +3,30 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - develop
+      - master
+
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: My first step
-        uses: ./.github/actions/test.yml
-      - name: My second step
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.9'
       - run: |
-          git branch
+          sh ./common.sh
+          date > docs/generated.txt
+          git config user.name Andrey
+          git config user.email and.isaev.v@yandex.ru
+          git add docs
+          git commit -m "updated docs"
+          git push
+
+  tests:
+    needs: build
+
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "hello!"
