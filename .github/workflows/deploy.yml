@@ -4,16 +4,15 @@ on:
   push:
     branches:
       - develop
-
+  pull_request:
+    branches:
+      - develop
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: crazy-max/ghaction-github-labeler@v4
-        with:
-            yaml-file: .github/labels.yml
       - uses: actions/setup-python@v4
         with:
           python-version: '3.9'
