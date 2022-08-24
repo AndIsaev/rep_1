@@ -17,16 +17,12 @@ jobs:
         with:
           python-version: '3.9'
 
-      - run: |
-          sh ./common.sh
-          date > docs/generated.txt
-
       - name: Deploy pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: ./docs
-          publish_branch: master
+          publish_branch: develop
 
       - uses: EndBug/add-and-commit@v9
 
